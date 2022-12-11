@@ -39,7 +39,7 @@ public class ProductDAO extends JpaDAO<Product> implements GenericDAO<Product> {
 	}
 
 	public List<Product> listActiveProducts() {
-		return super.findWithNamedQuery("Product.findActive");
+		return super.findWithNamedQuery("Product.listActive");
 	}
 
 	public Product findByTitle(String title) {
@@ -107,11 +107,11 @@ public class ProductDAO extends JpaDAO<Product> implements GenericDAO<Product> {
 	}
 
 	public List<Product> listByPriceDesc() {
-		return super.findWithNamedQuery("Product.findActiveSortByPriceDesc");
+		return super.findWithNamedQuery("Product.listActiveSortByPriceDesc");
 	}
 
 	public List<Product> listByPrice() {
-		return super.findWithNamedQuery("Product.findActiveSortByPrice");
+		return super.findWithNamedQuery("Product.listActiveSortByPrice");
 	}
 
 	public List<Product> listByPriceDesc(int categoryId) {

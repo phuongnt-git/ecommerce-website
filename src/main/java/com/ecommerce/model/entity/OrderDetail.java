@@ -15,8 +15,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "order_detail")
 @NamedQueries({
-		@NamedQuery(name = "OrderDetail.bestSelling", query = "SELECT od.product FROM OrderDetail od GROUP by od.product.productId ORDER BY SUM(od.quantity) DESC"),
-		@NamedQuery(name = "OrderDetail.bestSellingFindByCategory", query = "SELECT od.product FROM OrderDetail od JOIN Category c ON od.product.category.categoryId = c.categoryId AND c.categoryId = :categoryId GROUP by od.product.productId ORDER BY SUM(od.quantity) DESC"),
+		@NamedQuery(name = "OrderDetail.bestSelling", query = "SELECT od.product FROM OrderDetail od WHERE od.product.active = TRUE GROUP by od.product.productId ORDER BY SUM(od.quantity) DESC"),
+		@NamedQuery(name = "OrderDetail.bestSellingFindByCategory", query = "SELECT od.product FROM OrderDetail od JOIN Category c ON od.product.category.categoryId = c.categoryId AND c.categoryId = :categoryId WHERE od.product.active = TRUE GROUP by od.product.productId ORDER BY SUM(od.quantity) DESC"),
 		@NamedQuery(name = "OrderDetail.countByProduct", query = "SELECT COUNT(od) FROM OrderDetail od WHERE od.product.productId = :productId") })
 public class OrderDetail {
 

@@ -17,7 +17,7 @@
 <body>
 <%@ include file="header.jsp" %>
 
-<h1 class="products text-center">You already wrote a review for this product.</h1>
+<h2 class="products text-center">You already wrote reviews for this product</h2>
 <div class="container">
     <div class="row">
         <div class="col-md-6 text-center">
@@ -26,11 +26,12 @@
             </div>
         </div>
         <div class="col-md-6 mt-5 mt-md-2 text-center text-md-left">
-            <h5>${product.title}</h5>
-            <h5>Headline</h5>
-            <h6>${review.headline}</h6>
-            <h5>Details</h5>
-            <h6>${review.comment}</h6>
+            <h3>${product.title}</h3>
+            <h4>Headline</h4>
+            <p>${review.headline}</p>
+            <h4>Details</h4>
+            <p>${review.comment}</p>
+            <a href="#" class="signup-image-link" onclick="history.go(-1);">Go back</a>
         </div>
     </div>
 </div>
@@ -49,7 +50,7 @@
             starWidth: "40px",
             fullStar: true,
             rating: ${review.rating},
-            readOnly: true
+            readOnly: true,
         });
     });
 </script>

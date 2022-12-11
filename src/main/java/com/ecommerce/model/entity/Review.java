@@ -10,11 +10,11 @@ import static javax.persistence.GenerationType.IDENTITY;
 @NamedQueries({ @NamedQuery(name = "Review.listAll", query = "SELECT r FROM Review r ORDER BY r.reviewTime DESC"),
 		@NamedQuery(name = "Review.countAll", query = "SELECT COUNT(r) FROM Review r"),
 		@NamedQuery(name = "Review.countByCustomer", query = "SELECT COUNT(r.reviewId) FROM Review r WHERE r.customer.customerId = :customerId"),
-		@NamedQuery(name = "Review.findByCustomerAndProduct", query = "SELECT r FROM Review r WHERE r.customer.customerId = :customerId AND r.product.productId = :productId"),
-		@NamedQuery(name = "Review.mostFavored", query = "SELECT r.product, COUNT(r.product.productId) AS ReviewCount, AVG(r.rating) as AvgRating FROM Review r GROUP BY r.product.productId HAVING AVG(r.rating) >= 4.0 ORDER BY ReviewCount DESC, AvgRating DESC"),
-		@NamedQuery(name = "Review.mostFavoredFindByCategory", query = "SELECT r.product, COUNT(r.product.productId) AS ReviewCount, AVG(r.rating) as AvgRating FROM Review r JOIN Category c ON r.product.category.categoryId = c.categoryId AND c.categoryId = :categoryId GROUP BY r.product.productId HAVING AVG(r.rating) >= 4.0 ORDER BY ReviewCount DESC, AvgRating DESC"),
-		@NamedQuery(name = "Review.listRated", query = "SELECT r.product, AVG(r.rating) as AvgRating FROM Review r GROUP BY r.product.productId HAVING AVG(r.rating) >= :ratingStars ORDER BY AvgRating DESC"),
-		@NamedQuery(name = "Review.listRatedFindByCategory", query = "SELECT r.product, AVG(r.rating) as AvgRating FROM Review r JOIN Category c ON r.product.category.categoryId = c.categoryId AND c.categoryId = :categoryId GROUP BY r.product.productId HAVING AVG(r.rating) >= :ratingStars ORDER BY AvgRating DESC") })
+		@NamedQuery(name = "Review.findByCustomerAndProduct", query = "SELECT r FROM Review r WHERE r.product.active = TRUE AND r.customer.customerId = :customerId AND r.product.productId = :productId"),
+		@NamedQuery(name = "Review.mostFavored", query = "SELECT r.product, COUNT(r.product.productId) AS ReviewCount, AVG(r.rating) as AvgRating FROM Review r WHERE r.product.active = TRUE GROUP BY r.product.productId HAVING AVG(r.rating) >= 4.0 ORDER BY ReviewCount DESC, AvgRating DESC"),
+		@NamedQuery(name = "Review.mostFavoredFindByCategory", query = "SELECT r.product, COUNT(r.product.productId) AS ReviewCount, AVG(r.rating) as AvgRating FROM Review r JOIN Category c ON r.product.category.categoryId = c.categoryId AND c.categoryId = :categoryId WHERE r.product.active = TRUE GROUP BY r.product.productId HAVING AVG(r.rating) >= 4.0 ORDER BY ReviewCount DESC, AvgRating DESC"),
+		@NamedQuery(name = "Review.listRated", query = "SELECT r.product, AVG(r.rating) as AvgRating FROM Review r WHERE r.product.active = TRUE GROUP BY r.product.productId HAVING AVG(r.rating) >= :ratingStars ORDER BY AvgRating DESC"),
+		@NamedQuery(name = "Review.listRatedFindByCategory", query = "SELECT r.product, AVG(r.rating) as AvgRating FROM Review r JOIN Category c ON r.product.category.categoryId = c.categoryId AND c.categoryId = :categoryId WHERE r.product.active = TRUE GROUP BY r.product.productId HAVING AVG(r.rating) >= :ratingStars ORDER BY AvgRating DESC") })
 public class Review {
 
 	private Integer reviewId;

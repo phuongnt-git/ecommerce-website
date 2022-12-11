@@ -30,8 +30,9 @@
                 <h2 class="mb-3 mt-0">${product.title}</h2>
                 <p class="lead mt-2 mb-3 primary-color">
                 <div id="rateYo"></div>
-                <input type="hidden" id="rating" name="rating" required="required"/>
+                <input type="hidden" id="rating" name="rating"/>
                 <input type="hidden" name="productId" value="${product.productId}"/>
+                <br>
                 <input type="text" name="headline" size="60"
                        placeholder="Headline or summary for your review (required)" required="required"/>
                 <textarea name="comment" cols="70" rows="10" placeholder="Write your review details..."
@@ -54,7 +55,7 @@
             fullStar: true,
             onSet: function (rating, rateYoInstance) {
                 $("#rating").val(rating);
-            }
+            },
         });
     });
 </script>

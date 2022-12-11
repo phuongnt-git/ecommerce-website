@@ -4,10 +4,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>${loggedCustomer.fullName} Reviews</title>
 
     <%@ include file="common.jsp" %>
-
-
 </head>
 <body>
 <%@ include file="header.jsp" %>
@@ -22,12 +21,12 @@
         </div>
         <div class="col-md-6 mt-5 mt-md-2 text-center text-md-left">
             <h2 class="mb-3 mt-0">${product.title}</h2>
-            <h4>Your review has been posted. Thank you!</h4>
+            <p>Your review has been posted. Thank you!</p>
+            <a href="${pageContext.request.contextPath}/" class="signup-image-link">Continue Shopping</a>
         </div>
     </div>
 </div>
 <h2 class="products text-center"></h2>
-
 <%@ include file="footer.jsp" %>
 </body>
 </html>

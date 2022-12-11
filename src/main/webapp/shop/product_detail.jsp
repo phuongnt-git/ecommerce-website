@@ -27,7 +27,7 @@
                 <h2 class="mb-3 mt-0">${product.title}</h2>
                 <p class="lead mt-2 mb-3 primary-color">
                     <jsp:directive.include file="product_rating.jsp"/>&nbsp;&nbsp;
-                    <a href="#reviews">${fn:length(product.reviews)} Reviews</a></p>
+                    <a href="#reviews">${fn:length(product.reviews)} Review(s)</a></p>
                 <p class="lead mt-2 mb-3 primary-color">$${product.price}</p>
                 <p>${product.description}</p>
 

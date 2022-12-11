@@ -77,7 +77,6 @@
                             <img src="shop/images/logo-store.jpg" alt="">
                         </figure>
                         <a href="${pageContext.request.contextPath}/" class="signup-image-link">Continue Shopping</a>
-
                     </div>
                 </div>
             </div>

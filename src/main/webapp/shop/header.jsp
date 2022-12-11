@@ -17,7 +17,7 @@
                 <ul class="navbar-nav mt-2 mt-md-0">
                     <li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/">Home
                     </a></li>
-                    <li class="nav-item active"><a class="nav-link" href="view_all">Shop All
+                    <li class="nav-item active"><a class="nav-link" href="view_all">Shop
                     </a></li>
                     <li class="nav-item dropdown mega-menu"><a
                             class="nav-link dropdown-toggle" href="#"

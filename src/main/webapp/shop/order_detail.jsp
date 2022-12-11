@@ -134,7 +134,7 @@
                                              height="64"/>
                                     </div>
                                     <div class="col-md-9 text-left mt-sm-2">
-                                        <h4>${orderDetail.product.title}</h4>
+                                        <a href="view_product?id=${orderDetail.product.productId}"><h4>${orderDetail.product.title}</h4></a>
                                     </div>
                                 </div>
                             </td>
