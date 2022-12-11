@@ -6,27 +6,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <%@ include file="common.jsp" %>
-
     <link rel="stylesheet" href="shop/css/style.css">
-
-    <title>Order History - Online Store</title>
+    <title>${loggedCustomer.fullName} - Order History</title>
 </head>
 <body>
 <%@ include file="header.jsp" %>
-
 <section class="cart text-center">
     <div class="container">
         <c:if test="${fn:length(listOrder) == 0}">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2 class="mt-5 mb-2">You have not placed any order.</h2>
+                    <h2 class="mt-5 mb-2">You have not placed any order</h2>
                 </div>
             </div>
         </c:if>
         <c:if test="${fn:length(listOrder) > 0}">
-            <h2 class="mt-5 mb-2">${loggedCustomer.fullName} list order. </h2>
+            <h2 class="mt-5 mb-2">${loggedCustomer.fullName} - Order History</h2>
             <table class="table table-condensed">
                 <thead>
                 <tr>
@@ -54,11 +50,8 @@
                 </tbody>
             </table>
         </c:if>
-
     </div>
 </section>
-
-
 <%@ include file="footer.jsp" %>
 </body>
 </html>

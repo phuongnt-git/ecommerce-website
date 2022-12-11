@@ -2,6 +2,7 @@ package com.ecommerce.model.dao;
 
 import com.ecommerce.model.entity.Product;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.*;
 
 public class ProductDAO extends JpaDAO<Product> implements GenericDAO<Product> {
@@ -150,6 +151,10 @@ public class ProductDAO extends JpaDAO<Product> implements GenericDAO<Product> {
 			}
 		}
 		return listRatedProducts;
+	}
+
+	public List<Product> listOrderedProductsByCustomer(int customerId) {
+		return super.findWithNamedQuery("OrderDetail.findByCustomer", "customerId", customerId);
 	}
 
 }

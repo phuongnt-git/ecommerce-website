@@ -30,8 +30,6 @@
                     <a href="#reviews">${fn:length(product.reviews)} Review(s)</a></p>
                 <p class="lead mt-2 mb-3 primary-color">$${product.price}</p>
                 <p>${product.description}</p>
-
-
                 <a href="#" type="button" id="buttonAddToCart" class="btn btn-full-width btn-lg btn-outline-primary">Add
                     to cart</a></div>
         </div>
@@ -76,7 +74,9 @@
         </tr>
     </table>
     <div class="text-center">
-        <button class="btn btn-lg btn-outline-primary" id="buttonWriteReview">Write a Customer Review</button>
+        <c:if test="${unlockReview == true}">
+            <button class="btn btn-lg btn-outline-primary" id="buttonWriteReview">Write reviews</button>
+        </c:if>
     </div>
 </div>
 <div class="divider"></div>

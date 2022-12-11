@@ -211,5 +211,15 @@ class ProductDAOTest {
 
         assertEquals(0, topFavoredProducts.size());
     }
+
+    @Test
+    public void testListOrderedProductsByCustomer() {
+        int customerId = 1;
+        List<Product> listOrderedProductsByCustomer = productDAO.listOrderedProductsByCustomer(customerId);
+
+        listOrderedProductsByCustomer.forEach(product -> System.out.println(product.getTitle()));
+
+        assertTrue(listOrderedProductsByCustomer.size() > 0);
+    }
 }
 

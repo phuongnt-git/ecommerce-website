@@ -4,11 +4,13 @@ import com.ecommerce.model.dao.CategoryDAO;
 import com.ecommerce.model.dao.OrderDAO;
 import com.ecommerce.model.dao.ProductDAO;
 import com.ecommerce.model.entity.Category;
+import com.ecommerce.model.entity.Customer;
 import com.ecommerce.model.entity.Product;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import java.io.IOException;
 import java.io.InputStream;
@@ -363,6 +365,15 @@ public class ProductService {
 
 			request.setAttribute("listProducts", listProducts);
 			request.setAttribute("product", product);
+
+			Customer customer = (Customer) request.getSession().getAttribute("loggedCustomer");
+			if (customer != null) {
+				List<Product> listOrderedProducts = productDAO.listOrderedProductsByCustomer(customer.getCustomerId());
+
+				if (listOrderedProducts.contains(product)){
+					request.setAttribute("unlockReview", true);
+				}
+			}
 
 			forwardToPage("shop/product_detail.jsp", request, response);
 

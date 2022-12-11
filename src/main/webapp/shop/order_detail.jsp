@@ -6,9 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <%@ include file="common.jsp" %>
-
     <link rel="stylesheet" href="shop/css/style.css">
-
     <title>${loggedCustomer.fullName} - Order Detail</title>
 </head>
 <body>
@@ -18,7 +16,7 @@
         <c:if test="${order == null}">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2 class="mt-5 mb-2">Sorry. You are not authorized to view this order</h2>
+                    <h2 class="mt-5 mb-2">You are not authorized to view this order</h2>
                 </div>
             </div>
         </c:if>
@@ -55,7 +53,6 @@
                         </table>
                     </div>
                 </div>
-
                 <div class="col-md-6 text-center">
                     <h2>Recipient Information</h2>
                     <div align="center">
@@ -104,7 +101,6 @@
     </div>
 </section>
 <div class="divider"></div>
-
 <section class="cart text-center">
     <c:if test="${order != null}">
         <div class="container">
@@ -119,7 +115,8 @@
                         <th style="width: 50%">Product Title</th>
                         <th style="width: 10%">Price</th>
                         <th style="width: 10%">Quantity</th>
-                        <th style="width: 25%">Subtotal</th>
+                        <th style="width: 10%">Subtotal</th>
+                        <th style="width: 15%">Help us reviews</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -134,17 +131,18 @@
                                              height="64"/>
                                     </div>
                                     <div class="col-md-9 text-left mt-sm-2">
-                                        <a href="view_product?id=${orderDetail.product.productId}"><h4>${orderDetail.product.title}</h4></a>
+                                        <a href="view_product?id=${orderDetail.product.productId}" class="signup-image-link"><h4>${orderDetail.product.title}</h4></a>
                                     </div>
                                 </div>
                             </td>
                             <td>$${orderDetail.product.price}</td>
                             <td>${orderDetail.quantity}</td>
                             <td>$${orderDetail.subtotal}</td>
+                            <th><a href="write_review?product_id=${orderDetail.product.productId}" class="signup-image-link">Write reviews</a></th>
                         </tr>
                     </c:forEach>
                     <tr>
-                        <td colspan="5" align="right">
+                        <td colspan="6" align="right">
                             <p>Subtotal: $${order.subtotal}</p>
                             <p>Tax: $${order.tax}</p>
                             <p>Shipping fee: $${order.shippingFee}</p>

@@ -88,6 +88,7 @@ public class ReviewService {
 
 		HttpSession session = request.getSession();
 		session.setAttribute("product", product);
+		session.setAttribute("orderDetail", product);
 
 		Customer customer = (Customer) session.getAttribute("loggedCustomer");
 
