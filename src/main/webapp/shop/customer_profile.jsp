@@ -67,7 +67,7 @@
                                 <td>&nbsp;</td>
                             </tr>
                             <tr>
-                                <td colspan="2" align="center"><b><a href="edit_profile">Edit My Profile</a></b></td>
+                                <td colspan="2" align="center"><a href="edit_profile">Edit My Profile</a></td>
                             </tr>
                         </table>
                     </div>
@@ -76,7 +76,7 @@
                         <figure>
                             <img src="shop/images/logo-store.jpg" alt="">
                         </figure>
-                        <a href="${pageContext.request.contextPath}/" class="signup-image-link">Continue Shopping</a>
+                        <a href="${pageContext.request.contextPath}/">Continue Shopping</a>
                     </div>
                 </div>
             </div>

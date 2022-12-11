@@ -126,19 +126,17 @@
                             <td data-th="Product">
                                 <div class="row">
                                     <div class="col-md-3 text-left">
-                                        <img style="vertical-align: middle;"
-                                             src="data:image/jpg;base64,${orderDetail.product.base64Image}" width="48"
-                                             height="64"/>
+                                        <img style="vertical-align: middle;" src="data:image/jpg;base64,${orderDetail.product.base64Image}" width="48" height="64" alt=""/>
                                     </div>
                                     <div class="col-md-9 text-left mt-sm-2">
-                                        <a href="view_product?id=${orderDetail.product.productId}" class="signup-image-link"><h4>${orderDetail.product.title}</h4></a>
+                                        <a href="view_product?id=${orderDetail.product.productId}"><h4>${orderDetail.product.title}</h4></a>
                                     </div>
                                 </div>
                             </td>
                             <td>$${orderDetail.product.price}</td>
                             <td>${orderDetail.quantity}</td>
                             <td>$${orderDetail.subtotal}</td>
-                            <th><a href="write_review?product_id=${orderDetail.product.productId}" class="signup-image-link">Write reviews</a></th>
+                            <th><a href="write_review?product_id=${orderDetail.product.productId}">Write reviews</a></th>
                         </tr>
                     </c:forEach>
                     <tr>

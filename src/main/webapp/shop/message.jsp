@@ -4,11 +4,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <%@ include file="common.jsp" %>
-
     <link rel="stylesheet" href="shop/cssloginre/style.css">
-
     <title>Online Website</title>
 </head>
 <body>
@@ -20,7 +17,6 @@
         <section class="signup">
             <div class="container_sign">
                 <div class="signup-content">
-
                     <div class="register-form">
                         <div>
                             <br>
@@ -36,10 +32,8 @@
                         <figure>
                             <img src="shop/images/logo-store.jpg" alt="">
                         </figure>
-                        <a href="${pageContext.request.contextPath}/" type="button">Continue
-                            Shopping</a>
+                        <a href="${pageContext.request.contextPath}/">Continue Shopping</a>
                     </div>
-
                 </div>
             </div>
         </section>
