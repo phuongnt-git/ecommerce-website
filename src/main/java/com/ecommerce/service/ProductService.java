@@ -10,7 +10,6 @@ import com.ecommerce.model.entity.Product;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import java.io.IOException;
 import java.io.InputStream;
@@ -194,7 +193,7 @@ public class ProductService {
 	}
 
 	public void listAllProduct() throws ServletException, IOException {
-		List<Product> listProducts = productDAO.listActiveProducts();
+		List<Product> listProducts = productDAO.listActive();
 		List<Category> listCategories = categoryDAO.listAll();
 
 		String sort = request.getParameter("sort");
@@ -389,7 +388,7 @@ public class ProductService {
 		List<Product> result;
 
 		if (keyword.equals("")) {
-			result = productDAO.listActiveProducts();
+			result = productDAO.listActive();
 		} else {
 			result = productDAO.search(keyword);
 		}

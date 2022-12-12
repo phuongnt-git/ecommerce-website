@@ -8,18 +8,18 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 @Table(name = "product", uniqueConstraints = @UniqueConstraint(columnNames = "title"))
 @NamedQueries({ @NamedQuery(name = "Product.findAll", query = "SELECT p FROM Product p"),
-		@NamedQuery(name = "Product.listActive", query = "SELECT p FROM Product p WHERE p.active = TRUE"),
+		@NamedQuery(name = "Product.findActive", query = "SELECT p FROM Product p WHERE p.active = TRUE"),
 		@NamedQuery(name = "Product.findByTitle", query = "SELECT p FROM Product p WHERE p.title = :title"),
 		@NamedQuery(name = "Product.countAll", query = "SELECT COUNT(p) FROM Product p"),
 		@NamedQuery(name = "Product.findByCategory", query = "SELECT p FROM Product p JOIN Category c ON p.category.categoryId = c.categoryId AND c.categoryId = :categoryId WHERE p.active = TRUE"),
 		@NamedQuery(name = "Product.findNew", query = "SELECT p FROM Product p WHERE p.active = TRUE ORDER BY p.publishDate DESC"),
 		@NamedQuery(name = "Product.search", query = "SELECT p FROM Product p WHERE p.active = TRUE AND p.title LIKE '%' || :keyword || '%' OR p.description LIKE '%' || :keyword || '%'"),
 		@NamedQuery(name = "Product.countByCategory", query = "SELECT COUNT(p) FROM Product p WHERE p.category.categoryId = :categoryId"),
-		@NamedQuery(name = "Product.findByCategorySortByPriceDesc", query = "SELECT p FROM Product p JOIN Category c ON p.category.categoryId = c.categoryId AND c.categoryId = :categoryId WHERE p.active = TRUE ORDER BY p.price DESC"),
-		@NamedQuery(name = "Product.findByCategorySortByPrice", query = "SELECT p FROM Product p JOIN Category c ON p.category.categoryId = c.categoryId AND c.categoryId = :categoryId WHERE p.active = TRUE ORDER BY p.price"),
+		@NamedQuery(name = "Product.findByCategoryAndPriceDesc", query = "SELECT p FROM Product p JOIN Category c ON p.category.categoryId = c.categoryId AND c.categoryId = :categoryId WHERE p.active = TRUE ORDER BY p.price DESC"),
+		@NamedQuery(name = "Product.findByCategoryAndPriceAsc", query = "SELECT p FROM Product p JOIN Category c ON p.category.categoryId = c.categoryId AND c.categoryId = :categoryId WHERE p.active = TRUE ORDER BY p.price"),
 		@NamedQuery(name = "Product.findNewAndByCategory", query = "SELECT p FROM Product p JOIN Category c ON p.category.categoryId = c.categoryId AND c.categoryId = :categoryId WHERE p.active = TRUE ORDER BY p.publishDate DESC"),
-		@NamedQuery(name = "Product.listActiveSortByPriceDesc", query = "SELECT p FROM Product p WHERE p.active = TRUE ORDER BY p.price DESC"),
-		@NamedQuery(name = "Product.listActiveSortByPrice", query = "SELECT p FROM Product p WHERE p.active = TRUE ORDER BY p.price") })
+		@NamedQuery(name = "Product.findActiveAndPriceDesc", query = "SELECT p FROM Product p WHERE p.active = TRUE ORDER BY p.price DESC"),
+		@NamedQuery(name = "Product.findActiveAndPriceAsc", query = "SELECT p FROM Product p WHERE p.active = TRUE ORDER BY p.price") })
 public class Product {
 
 	private Integer productId;

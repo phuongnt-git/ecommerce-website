@@ -82,7 +82,7 @@
                                        href="view_all?sort=${'price_desc'}">Price
                                         Descending</a>
                                     <a class="dropdown-item"
-                                       href="view_all?sort=${'price'}">Price
+                                       href="view_all?sort=${'price_asc'}">Price
                                         Ascending</a>
                                     <a class="dropdown-item"
                                        href="view_all?sort=${'newest'}">Newest</a>

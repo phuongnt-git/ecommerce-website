@@ -2,7 +2,6 @@ package com.ecommerce.model.dao;
 
 import com.ecommerce.model.entity.Product;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.*;
 
 public class ProductDAO extends JpaDAO<Product> implements GenericDAO<Product> {
@@ -39,8 +38,8 @@ public class ProductDAO extends JpaDAO<Product> implements GenericDAO<Product> {
 		return super.countWithNamedQuery("Product.countAll");
 	}
 
-	public List<Product> listActiveProducts() {
-		return super.findWithNamedQuery("Product.listActive");
+	public List<Product> listActive() {
+		return super.findWithNamedQuery("Product.findActive");
 	}
 
 	public Product findByTitle(String title) {
@@ -108,19 +107,19 @@ public class ProductDAO extends JpaDAO<Product> implements GenericDAO<Product> {
 	}
 
 	public List<Product> listByPriceDesc() {
-		return super.findWithNamedQuery("Product.listActiveSortByPriceDesc");
+		return super.findWithNamedQuery("Product.findActiveAndPriceDesc");
 	}
 
 	public List<Product> listByPrice() {
-		return super.findWithNamedQuery("Product.listActiveSortByPrice");
+		return super.findWithNamedQuery("Product.findActiveAndPriceAsc");
 	}
 
 	public List<Product> listByPriceDesc(int categoryId) {
-		return super.findWithNamedQuery("Product.findByCategorySortByPriceDesc", "categoryId", categoryId);
+		return super.findWithNamedQuery("Product.findByCategoryAndPriceDesc", "categoryId", categoryId);
 	}
 
 	public List<Product> listByPrice(int categoryId) {
-		return super.findWithNamedQuery("Product.findByCategorySortByPrice", "categoryId", categoryId);
+		return super.findWithNamedQuery("Product.findByCategoryAndPriceAsc", "categoryId", categoryId);
 	}
 
 	public List<Product> listRatedProducts(double ratingStars) {
