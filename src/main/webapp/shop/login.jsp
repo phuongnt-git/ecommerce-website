@@ -65,10 +65,8 @@
                         <figure>
                             <img src="shop/images/logo-store.jpg" alt="sing up image">
                         </figure>
-                        <a href="register" class="signup-image-link">Create an
-                            account</a>
+                        <a href="register">Create an account</a>
                     </div>
-
                 </div>
             </div>
         </section>
