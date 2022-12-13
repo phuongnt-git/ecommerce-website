@@ -32,22 +32,15 @@
     - [**JavaMail API 1.6.2**](https://mvnrepository.com/artifact/com.sun.mail/javax.mail/1.6.2)
 - Build: **Maven Project 4.0.0**
 - [**Apache Tomcat® 9.x**](https://tomcat.apache.org/download-90.cgi)
-- Relational database management system: [**MySQL Connector Java 8.0.31
-  **](https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.31)
-- Hibernate's core ORM functionality: [**Hibernate 5.4.33.Final
-  **](https://mvnrepository.com/artifact/org.hibernate/hibernate-core/6.1.5.Final)
-- Integration for c3p0 Connection pooling into Hibernate ORM: [**Hibernate C3P0 Relocation 5.6.14.Final
-  **](https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0/5.6.14.Final)
+- Relational database management system: [**MySQL Connector Java 8.0.31**](https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.31)
+- Hibernate's core ORM functionality: [**Hibernate 5.4.33.Final**](https://mvnrepository.com/artifact/org.hibernate/hibernate-core/6.1.5.Final)
+- Integration for c3p0 Connection pooling into Hibernate ORM: [**Hibernate C3P0 Relocation 5.6.14.Final**](https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0/5.6.14.Final)
 
 - Testing framework:
-    - JUnit Jupiter is the API for writing tests using JUnit 5: [**JUnit Jupiter API 5.9.1
-      **](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api/5.9.1)
-    - Core package for the JUnit Jupiter test engine: [**JUnit Jupiter Engine 5.9.1
-      **](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine/5.9.1)
+    - JUnit Jupiter is the API for writing tests using JUnit 5: [**JUnit Jupiter API 5.9.1**](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api/5.9.1)
+    - Core package for the JUnit Jupiter test engine: [**JUnit Jupiter Engine 5.9.1**](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine/5.9.1)
 
-- PayPal SDK for integrating with the REST APIs: [**REST API SDK 1.14.0
-  **](https://mvnrepository.com/artifact/com.paypal.sdk/rest-api-sdk/1.14.0)
-
+- PayPal SDK for integrating with the REST APIs: [**REST API SDK 1.14.0**](https://mvnrepository.com/artifact/com.paypal.sdk/rest-api-sdk/1.14.0)
 
 - Frontend frameworks :
     - [**Bootstrap**](https://getbootstrap.com/) - Powerful, extensible, and feature-packed frontend toolkit.
