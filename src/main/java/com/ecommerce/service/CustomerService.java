@@ -233,9 +233,9 @@ public class CustomerService {
 		}
 	}
 
-	public void logout() throws ServletException, IOException {
+	public void logout() throws IOException {
 		request.getSession().removeAttribute("loggedCustomer");
-		forwardToPage("shop/index.jsp", request, response);
+		response.sendRedirect(request.getContextPath());
 	}
 
 	public void showCustomerProfile() throws ServletException, IOException {
