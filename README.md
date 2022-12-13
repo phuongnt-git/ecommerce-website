@@ -113,23 +113,24 @@
 ├── <a href="./pom.xml" target="_blank">pom.xml</a>                                            (Acronym for Project Object Model)
 </pre>
 
-# How to run
+## Hosting on Heroku
+https://ecommerce-store.herokuapp.com/
+
+## How to run
 
 1. Download and setup [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/download/#section=windows).
 2. Download and setup [MySQL Community Server](https://dev.mysql.com/downloads/mysql/) and [MySQL Workbench](https://dev.mysql.com/downloads/workbench/).
-3. Download this repository and unzip folder.
-4. MySQL Workbench -> Server -> Data Import -> Import from Self-Contained File -> Choose location of Dump.sql file -> Select Database Objects to Import -> Choose Dump Structure and Data -> Start Import.
-5. IntelliJ -> Open -> Choose location of source folder.
-6. Wait for Maven download and setup all dependencies from pom.xml.
+3. Download this repository.
+4. MySQL Workbench -> Server -> Data Import -> Import from Self-Contained File -> ... -> Select Database to Import -> Choose Dump Structure and Data -> Start Import.
+5. IntelliJ -> Open.
+6. Wait for Maven download and setup dependencies.
 7. Setup [Apache Tomcat](https://tomcat.apache.org/).
 8. Enjoy ☺️.
 
 ## Note
 
-1. Change the connection (user and password) to MySQL
-   in <a href="./eCommerceWebsite/src/main/java/META-INF/persistence.xml" target="_blank">persistence.xml</a>
-   and <a href="./eCommerceWebsite/src/main/webapp/META-INF/hibernate.cfg.xml" target="_blank">hibernate.cfg.xml</a> to
-   your local connection.
+1. Change the MySQL connection in <a href="./src/main/java/META-INF/persistence.xml" target="_blank">persistence.xml</a> to
+   your localhost.
 2. Password field of user and customer is encrypted by MD5. Use this for login:
 
     - For user: admin@gmail.com | admin
