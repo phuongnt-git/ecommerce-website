@@ -56,7 +56,7 @@
 <pre>
 <b>eCommerceWebsite</b>
 ├── db
-│   ├── dumps.sql                                      (Generate the logical backup of the MySQL database)
+│   ├── Dump.sql                                      (Generate the logical backup of the MySQL database)
 ├── src
 │   ├── main
 │   │   ├── <b>java</b>                                       (Contains Controller & Model layer)
@@ -87,8 +87,8 @@
 │   │   │   ├── <b>com.ecommerce.utility</b>                  (For common extracted method)
 │   │   ├── <b>resources</b>                                  (Contains connections to model layer)
 │   │   │   ├── <b>META-INF</b>
-│   │   │   │   └── <a href="./eCommerceWebsite/src/main/resources/META-INF/persistence.xml" target="_blank">persistence.xml</a>                    (Configure a given JPA Persistence Unit)
-│   │   │   └── <a href="./eCommerceWebsite/src/main/resources/hibernate.cfg.xml" target="_blank">hibernate.cfg.xml</a>                      (Configure a Hibernate Reverse Engineering)
+│   │   │   │   └── <a href="./src/main/resources/META-INF/persistence.xml" target="_blank">persistence.xml</a>                    (Configure a given JPA Persistence Unit)
+│   │   │   └── <a href="./src/main/resources/hibernate.cfg.xml" target="_blank">hibernate.cfg.xml</a>                      (Configure a Hibernate Reverse Engineering)
 │   │   ├── <b>webapp</b>                                     (Contains connections to View layer)
 │   │   │   ├── <b>admin</b>                                  (Contain jsp files for admin page)
 │   │   │   ├── <b>assets</b>
@@ -102,7 +102,7 @@
 │   │   │   ├── <b>common</b>                                 (Contain jsp files for friendly error's user interface)
 │   │   │   ├── <b>shop</b>                                   (Contain jsp files for shop page)
 │   │   │   ├── <b>WEB-INF</b>
-│   │   │   │   └─── <a href="./eCommerceWebsite/src/main/webapp/WEB-INF/web.xml" target="_blank">web.xml</a>
+│   │   │   │   └─── <a href="./src/main/webapp/WEB-INF/web.xml" target="_blank">web.xml</a>
 │   │   ├── <b>test</b>
 │   │   │   ├── <b>com.ecommerce.model</b>                    
 │   │   │   │   └── <b>com.ecommerce.model.dao</b>            (Contains JUnit Test Case for DAO classes)
@@ -110,21 +110,19 @@
 │   │   │   ├── <b>com.ecommerce.utility</b>                  (Contains test class for common utility classes)
 │   │   ├── <b>webapp</b>
 │   │   │   ├── <b>META-INF</b>
-├── <a href="./eCommerceWebsite/pom.xml" target="_blank">pom.xml</a>                                            (Acronym for Project Object Model)
+├── <a href="./pom.xml" target="_blank">pom.xml</a>                                            (Acronym for Project Object Model)
 </pre>
 
-<!-- # How to run
+# How to run
 
-1. Download [Eclipse Installer](https://www.eclipse.org/downloads/packages/) and setup Eclipse IDE for Enterprise Java and Web Developers.
+1. Download and setup [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/download/#section=windows).
 2. Download and setup [MySQL Community Server](https://dev.mysql.com/downloads/mysql/) and [MySQL Workbench](https://dev.mysql.com/downloads/workbench/).
-3. Download this repo.
-4. Execute CreateDatabaseScript.sql.
-5. MySQL Workbench -> Server -> Data Import -> Import from Dump Project Folder -> ... -> Select Database Objects to Import -> Start Import.
-6. Eclipse -> File -> Open Projects from File System... -> Directory... -> "Choose the path of this repo folder" -> Finish.
-7. Wait for Maven setup and download all necessary .jar from pom.xml.
-8. Restart Eclipse.
-9. Setup [Apache Tomcat](https://tomcat.apache.org/).
-10. Click eCommerceWebsite -> Run As -> Run on Server -> Setup and enjoy ☺️ . -->
+3. Download this repository.
+4. MySQL Workbench -> Server -> Data Import -> Import from Self-Contained File -> Choose location of Dump.sql file -> Select Database Objects to Import -> Choose Dump Structure and Data -> Start Import.
+5. IntelliJ -> Open File.
+6. Wait for Maven download and setup all dependencies from pom.xml.
+7. Setup [Apache Tomcat](https://tomcat.apache.org/).
+8. Enjoy ☺️.
 
 ## Note
 
