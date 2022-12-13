@@ -117,9 +117,9 @@
 
 1. Download and setup [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/download/#section=windows).
 2. Download and setup [MySQL Community Server](https://dev.mysql.com/downloads/mysql/) and [MySQL Workbench](https://dev.mysql.com/downloads/workbench/).
-3. Download this repository.
+3. Download this repository and unzip folder.
 4. MySQL Workbench -> Server -> Data Import -> Import from Self-Contained File -> Choose location of Dump.sql file -> Select Database Objects to Import -> Choose Dump Structure and Data -> Start Import.
-5. IntelliJ -> Open File.
+5. IntelliJ -> Open -> Choose location of source folder.
 6. Wait for Maven download and setup all dependencies from pom.xml.
 7. Setup [Apache Tomcat](https://tomcat.apache.org/).
 8. Enjoy ☺️.
