@@ -33,7 +33,7 @@
 - Build: **Maven Project 4.0.0**
 - [**Apache Tomcat® 9.x**](https://tomcat.apache.org/download-90.cgi)
 - Relational database management system: [**MySQL Connector Java 8.0.31**](https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.31)
-- Hibernate's core ORM functionality: [**Hibernate 5.4.33.Final**](https://mvnrepository.com/artifact/org.hibernate/hibernate-core/6.1.5.Final)
+- Hibernate core ORM functionality: [**Hibernate 5.4.33.Final**](https://mvnrepository.com/artifact/org.hibernate/hibernate-core/6.1.5.Final)
 - Integration for c3p0 Connection pooling into Hibernate ORM: [**Hibernate C3P0 Relocation 5.6.14.Final**](https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0/5.6.14.Final)
 
 - Testing framework:
