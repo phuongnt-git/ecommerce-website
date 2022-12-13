@@ -55,10 +55,10 @@
 
 <pre>
 <b>eCommerceWebsite</b>
-├── db
-│   ├── Dump.sql                                      (Generate the logical backup of the MySQL database)
-├── src
-│   ├── main
+├── <b>db</b>
+│   ├── dump.sql                                      (Generate the logical backup of the MySQL database)
+├── <b>src</b>
+│   ├── <b>main</b>
 │   │   ├── <b>java</b>                                       (Contains Controller & Model layer)
 │   │   │   ├── <b>com.ecommerce.controller</b>
 │   │   │   │   └── <b>com.ecommerce.controller.admin</b>     (Controller for admin pages)
@@ -80,7 +80,7 @@
 │   │   │   │   │   └── product
 │   │   │   │   │   └── review
 │   │   │   ├── <b>com.ecommerce.model</b>
-│   │   │   │   └── dao                                (Classes for connecting to databases)
+│   │   │   │   └── dao                                (Classes for connecting to database)
 │   │   │   │   └── domain                             (Consists of classes using on domain)
 │   │   │   │   └── entity                             (Consists of Entity access classes)
 │   │   │   ├── <b>com.ecommerce.service</b>                  (Handle business logic for controller)
@@ -99,17 +99,15 @@
 │   │   │   │   └── js
 │   │   │   │   └── sass
 │   │   │   │   └── scss
-│   │   │   ├── <b>common</b>                                 (Contain jsp files for friendly error's user interface)
-│   │   │   ├── <b>shop</b>                                   (Contain jsp files for shop page)
+│   │   │   ├── <b>common</b>                                 (Contains jsp files for friendly error page)
+│   │   │   ├── <b>shop</b>                                   (Contains jsp files for shop page)
 │   │   │   ├── <b>WEB-INF</b>
 │   │   │   │   └─── <a href="./src/main/webapp/WEB-INF/web.xml" target="_blank">web.xml</a>
-│   │   ├── <b>test</b>
-│   │   │   ├── <b>com.ecommerce.model</b>                    
-│   │   │   │   └── <b>com.ecommerce.model.dao</b>            (Contains JUnit Test Case for DAO classes)
-│   │   │   │   └── <b>com.ecommerce.model.domain</b>         (Contains JUnit Test Case for domain classes)
-│   │   │   ├── <b>com.ecommerce.utility</b>                  (Contains test class for common utility classes)
-│   │   ├── <b>webapp</b>
-│   │   │   ├── <b>META-INF</b>
+│   ├── <b>test</b>
+│   │   ├── <b>com.ecommerce.model</b>                    
+│   │   │   └── <b>com.ecommerce.model.dao</b>                (Contains JUnit Test Case for DAO classes)
+│   │   │   └── <b>com.ecommerce.model.domain</b>             (Contains JUnit Test Case for domain classes)
+│   │   ├── <b>com.ecommerce.utility</b>                      (Contains test class for common utility classes)
 ├── <a href="./pom.xml" target="_blank">pom.xml</a>                                            (Acronym for Project Object Model)
 </pre>
 
