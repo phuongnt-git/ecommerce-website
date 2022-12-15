@@ -186,7 +186,7 @@ public class ProductService {
 
 				} else {
 					productDAO.delete(productId);
-					listProduct("The book has been deleted successfully.");
+					listProduct("The product has been deleted successfully.");
 				}
 			}
 		}
